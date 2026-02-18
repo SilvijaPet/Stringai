@@ -1,5 +1,5 @@
 import random
-from dataclasses import replace
+import string
 
 print("============================ 1 uzduotis =======================")
 # Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis).
@@ -149,13 +149,23 @@ print("============================ 12 uzduotis =======================")
 # Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
 
 
-
+random_string = "".join(random.choices(string.ascii_lowercase, k=3))
+print(random_string)
 
 
 print("============================ 13 uzduotis =======================")
 # Parašykite kodą, kuris generuotų atsitiktinį stringą su 10 atsitiktine tvarka išdėliotų žodžių, o žodžius generavimui imtų iš 11-me uždavinyje pateiktų dviejų stringų. Žodžiai neturi kartotis. (reikės masyvo)
 
+# gauname vieną didelį sąrašą žodžių (paimta is 11 uzduoties split reiksmes)
+all_words = word + word2
 
+# random.sample(all_words, 10)
+random_words = random.sample(all_words, 10)
+
+# sujungiame žodžius į vieną stringą
+random_string1 = " ".join(random_words)
+
+print(random_string1)
 
 
 
